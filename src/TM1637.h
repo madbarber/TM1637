@@ -26,9 +26,9 @@ struct DisplayDigit
     DisplayDigit& setG() { value |= 0x40; return *this; }
     DisplayDigit& setDot() { value |= 0x80; return *this; }
     operator uint8_t() { return value; }
-    void operator=(uint8_t rhs) { value = rhs; }
+    DisplayDigit& operator=(uint8_t rhs) { value = rhs; }
 
-    uint8_t value;
+    uint8_t value{};
 };
 
 
