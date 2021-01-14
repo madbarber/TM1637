@@ -222,6 +222,11 @@ private:
 #undef CASER
     }
 
+    inline void resetAnimation() noexcept
+    {
+        currentAnimation = Animation::NONE;
+    }
+
     template <DataCommand_e DATA_COMMAND, AddressCommand_e ADDRESS_COMMAND>
     void sendToDisplay(DisplayControl_e displayControl) const noexcept
     {

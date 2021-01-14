@@ -66,6 +66,7 @@ public:
         cache_ = temp;
         String cache;
         cache = "";
+        animator_.resetAnimation();
         for (decltype(offset) counter{}; counter < offset; ++counter)
             cache.concat(static_cast<char>(0x00));
         cache.concat(temp);
